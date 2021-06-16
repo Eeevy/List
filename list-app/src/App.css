@@ -1,0 +1,112 @@
+body {
+  background: #F8F8F8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #002B55;
+}
+
+a:hover {
+  color: #ff6dc8;
+}
+
+.btn-styled {
+  color: #002B55;
+  background-color: transparent !important;
+  background-image: linear-gradient(to right, #002B55, #ff6dc8);
+  background-size: 0;
+  background-repeat-x: no-repeat;
+  border-image: linear-gradient(to right, #002B55, #ff6dc8);
+  border-image-slice: 1;
+  border-image-width: 3px;
+  transition: all 0.5s ease;
+}
+
+.btn-styled:hover  {
+  background-size: 100%;
+}
+
+.top-div {
+  background-image:
+    linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(255, 109, 200, 0.73)),
+    url('https://p1.pxfuel.com/preview/699/515/620/ring-lord-of-the-rings-hobbit-dragon-magic-metallic.jpg');
+  height: 200px;
+  color: white;
+  background-size: 135% 135%;
+  -webkit-animation: TopDiv 20s ease infinite;
+  -moz-animation: TopDiv 20s ease infinite;
+  animation: TopDiv 20s ease infinite;
+}
+
+@-webkit-keyframes TopDiv {
+  0%{background-position:93% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:93% 0%}
+}
+
+@-moz-keyframes TopDiv {
+  0%{background-position:93% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:93% 0%}
+}
+
+@keyframes TopDiv {
+  0%{background-position:93% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:93% 0%}
+}
+
+.grid-view .quote {
+  display: -webkit-box;
+  height: 55px;
+  -webkit-line-clamp: 2;
+  overflow: scroll;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.grid-view .item {
+  width: 25%;
+}
+
+/* X-Small devices (portrait phones */
+@media only screen and (max-width: 575.98px) {
+  .grid-view .item {
+    width: 50%;
+  }
+
+  .office {
+      text-align: right;
+  }
+
+  .office-filter label {
+    font-size: 0.75rem;
+    padding: 4px;
+  }
+}
+
+/* Small devices (landscape phones) */
+@media only screen and (max-width: 767.98px) and (min-width: 575.98px) { 
+  .grid-view .item {
+    width: 50%;
+  }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (max-width: 991.98px) and (min-width: 767.98px){
+  .grid-view .item {
+    width: 33%;
+  }
+}
+
+/* Large devices (desktops) */
+@media only screen and (max-width: 1199.98px) and (min-width: 991.98px) {
+  .grid-view .item {
+    width: 25%;
+  }
+}
