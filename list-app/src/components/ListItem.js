@@ -43,7 +43,7 @@ function ListItem(props) {
 
         <div className="row mx-0 py-2">
             <div className="col quote d-flex justify-content-start">
-                {props.dialog != undefined &&
+                {props.dialog !== undefined &&
                     <small><i>"{props.dialog}"</i></small>
                 }
             </div>

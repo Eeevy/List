@@ -12,7 +12,7 @@ function GridItem(props) {
         </div>
 
         <div className="quote my-2">
-            {props.dialog != undefined &&
+            {props.dialog !== undefined &&
                 <small><i>"{props.dialog}"</i></small>
             }
         </div>
