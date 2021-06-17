@@ -14,11 +14,11 @@ function ListItem(props) {
             </div>
 
             <div className="col ellipsis">
-                <span>Race: {props.race}</span>
+                <small><span>Race: {props.race}</span></small>
             </div>
 
             <div className="col ellipsis d-flex justify-content-end">
-                <span>Gender: {props.gender}</span>
+                <small><span>Gender: {props.gender}</span></small>
             </div>
 
             <div className="col d-none d-md-inline pr-0">
@@ -31,7 +31,7 @@ function ListItem(props) {
 
         <div className="row mx-0 py-2">
             <div className="col ellipsis d-flex justify-content-start">
-                <span>Spouse: {props.spouse}</span>
+                <small><span>Spouse: {props.spouse}</span></small>
             </div>
 
             <div className="col pr-0 d-md-none">

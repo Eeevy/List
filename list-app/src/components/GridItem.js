@@ -6,12 +6,12 @@ function GridItem(props) {
 
         <div className="ellipsis pt-2">
             <strong className="pb-2">{props.name}</strong>
-            <p className="mb-0">Race: {props.race}</p>
-            <p className="mb-0">Gender: {props.gender}</p>
-            <p className="mb-0">Spouse: {props.spouse}</p>              
+            <small><p className="mb-0">Race: {props.race}</p></small>
+            <small><p className="mb-0">Gender: {props.gender}</p></small>
+            <small><span className="mb-0">Spouse: {props.spouse}</span></small>              
         </div>
 
-        <div className="quote my-2">
+        <div className="quote my-2 text-center">
             {props.dialog !== undefined &&
                 <small><i>"{props.dialog}"</i></small>
             }
