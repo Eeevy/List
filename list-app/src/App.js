@@ -34,7 +34,14 @@ class App extends Component {
       })
       .then(([res1, res2]) => {
         res1.docs
-        .map((x) => res2.docs.map((y) => { if (y.character === x._id) { x.dialog = y.dialog; return x; } }) );
+        .map((x) => res2.docs.map((y) => { 
+          if (y.character === x._id) { 
+            x.dialog = y.dialog;
+            return x; 
+          } else {
+            return null;
+          } 
+        }));
 
           this.setState({
             characters: res1.docs,
