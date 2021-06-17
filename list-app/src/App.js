@@ -21,19 +21,20 @@ class App extends Component {
     Promise.all([fetch('https://the-one-api.dev/v2/character', {
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer 9syRLb1-I6VEq9irvSI-'
+        'Authorization': process.env.REACT_APP_API_KEY
       },
     }), fetch('https://the-one-api.dev/v2/quote', {
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer 9syRLb1-I6VEq9irvSI-'
+        'Authorization': process.env.REACT_APP_API_KEY
       },
     })])
       .then(([res1, res2]) => { 
          return Promise.all([res1.json(), res2.json()]) 
       })
       .then(([res1, res2]) => {
-        res1.docs.map((x) => res2.docs.map((y) => { if (y.character === x._id) { x.dialog = y.dialog; return x; } }) );
+        res1.docs
+        .map((x) => res2.docs.map((y) => { if (y.character === x._id) { x.dialog = y.dialog; return x; } }) );
 
           this.setState({
             characters: res1.docs,
